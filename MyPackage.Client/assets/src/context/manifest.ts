@@ -1,6 +1,6 @@
 import { ManifestGlobalContext } from "@umbraco-cms/backoffice/extension-registry";
 
-export const contexts: Array<ManifestGlobalContext> = [
+const contexts: Array<ManifestGlobalContext> = [
   {
     type: "globalContext",
     alias: "time.context",
@@ -8,3 +8,5 @@ export const contexts: Array<ManifestGlobalContext> = [
     js: () => import("./time.context.ts"),
   },
 ];
+
+export const manifests = [...contexts];
