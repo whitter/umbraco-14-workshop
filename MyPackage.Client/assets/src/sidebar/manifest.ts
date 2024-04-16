@@ -3,7 +3,7 @@ import {
   ManifestMenuItem,
   ManifestSectionSidebarApp,
 } from "@umbraco-cms/backoffice/extension-registry";
-import { TIME_MENU_ALIAS, TIME_SECTION_ALIAS } from "../constants";
+import { TIME_SECTION_ALIAS, TIME_WORKSPACE_ENTITY_TYPE } from "../constants";
 
 const sidebarAppManifest: ManifestSectionSidebarApp = {
   type: "sectionSidebarApp",
@@ -24,7 +24,7 @@ const sidebarAppManifest: ManifestSectionSidebarApp = {
 
 const menuManifest: ManifestMenu = {
   type: "menu",
-  alias: TIME_MENU_ALIAS,
+  alias: "time.menu",
   name: "time sidebar menu",
   meta: {
     label: "Time",
@@ -38,8 +38,8 @@ const menuItemManifest: ManifestMenuItem = {
   meta: {
     label: "Time Zones",
     icon: "icon-alarm-clock",
-    entityType: "",
-    menus: [TIME_MENU_ALIAS],
+    entityType: TIME_WORKSPACE_ENTITY_TYPE,
+    menus: [menuManifest.alias],
   },
 };
 
