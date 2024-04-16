@@ -1,0 +1,11 @@
+{
+    "name": "MyPackage",
+    "private": "true",
+    "version": "0.0.0",
+    "type": "commonjs",
+    "description": "proxy package.json, so NPM Taskrunner extension in visual studio can find the commands",
+    "scripts": {
+        "build": "cd ./MyPackage.Client/Assets/ && npm run build",
+        "watch": "cd ./MyPackage.Client/Assets/ && npm run watch"
+    }
+}
