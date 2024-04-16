@@ -6,20 +6,21 @@ import {
   customElement,
   property,
 } from "@umbraco-cms/backoffice/external/lit";
-import TimeManagementContext, { TIME_MANAGEMENT_CONTEXT_TOKEN } from "../context/time.context";
+import TimeManagementContext, {
+  TIME_MANAGEMENT_CONTEXT_TOKEN,
+} from "../context/time.context";
 
 @customElement("mypackage-dashboard")
 export class MyPackageDashboard extends UmbElementMixin(LitElement) {
-
-  #timeContext? : TimeManagementContext;
+  #timeContext?: TimeManagementContext;
 
   @property()
   title = "MyPackage dashboard";
 
-  @property({type: String})
+  @property({ type: String })
   time?: string;
 
-  @property({type: String})
+  @property({ type: String })
   date?: string;
 
   constructor() {
@@ -39,7 +40,7 @@ export class MyPackageDashboard extends UmbElementMixin(LitElement) {
   }
 
   async getTime() {
-    await this.#timeContext?.getTime();     
+    await this.#timeContext?.getTime();
   }
 
   async getDate() {
@@ -48,14 +49,27 @@ export class MyPackageDashboard extends UmbElementMixin(LitElement) {
 
   render() {
     return html`
-      <uui-box headline="${this.title}">
+      <uui-box headline="${this.localize.term("time_name")}">
+        <div slot="header">
+          <umb-localize key="time_description"></umb-localize>
+        </div>
         <div>
-          <uui-button @click=${this.getTime} look="primary" color="positive" label="get time"></uui-button>
+          <uui-button
+            @click=${this.getTime}
+            look="primary"
+            color="positive"
+            label="get time"
+          ></uui-button>
           <h2>${this.time}</h2>
         </div>
 
         <div>
-          <uui-button @click=${this.getDate} look="primary" color="default" label="get date" ></uui-button>
+          <uui-button
+            @click=${this.getDate}
+            look="primary"
+            color="default"
+            label="get date"
+          ></uui-button>
           <h2>${this.date}</h2>
         </div>
       </uui-box>
