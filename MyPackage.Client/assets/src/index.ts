@@ -8,6 +8,7 @@ import { manifests as sectionManifests } from "./section/manifest";
 import { manifests as sidebarManifests } from "./sidebar/manifest";
 import { manifests as workspaceManifests } from "./workspace/manifest";
 import { manifests as documentsManifests } from "./documents/manifest";
+import { manifests as headersManifests } from "./header/manifest";
 
 const manifests: Array<ManifestTypes> = [
   ...dashboardManifests,
@@ -16,6 +17,7 @@ const manifests: Array<ManifestTypes> = [
   ...sidebarManifests,
   ...workspaceManifests,
   ...documentsManifests,
+  ...headersManifests,
 ];
 
 export const onInit: UmbEntryPointOnInit = (_host, extensionRegistry) => {
