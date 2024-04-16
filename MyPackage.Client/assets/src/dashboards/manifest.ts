@@ -1,4 +1,5 @@
 import type { ManifestDashboard } from "@umbraco-cms/backoffice/extension-registry";
+import { TIME_SECTION_ALIAS } from "../constants.js";
 
 const dashboards: Array<ManifestDashboard> = [
     {
@@ -15,7 +16,7 @@ const dashboards: Array<ManifestDashboard> = [
         conditions: [
             {
                 alias: 'Umb.Condition.SectionAlias',
-                match: 'Umb.Section.Content'
+                match: TIME_SECTION_ALIAS
             }
         ]
     }
