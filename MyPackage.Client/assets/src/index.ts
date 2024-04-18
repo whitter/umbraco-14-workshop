@@ -10,6 +10,8 @@ import { manifests as workspaceManifests } from "./workspace/manifest";
 import { manifests as documentsManifests } from "./documents/manifest";
 import { manifests as headersManifests } from "./header/manifest";
 import { manifests as localizationManifests } from "./localization/manifest";
+import { manifests as entityActionManifests } from "./actions/entity/manifest";
+import { manifests as workspaceActionManifests } from "./actions/workspace/manifest";
 
 const manifests: Array<ManifestTypes> = [
   ...dashboardManifests,
@@ -20,6 +22,8 @@ const manifests: Array<ManifestTypes> = [
   ...documentsManifests,
   ...headersManifests,
   ...localizationManifests,
+  ...entityActionManifests,
+  ...workspaceActionManifests,
 ];
 
 export const onInit: UmbEntryPointOnInit = (_host, extensionRegistry) => {
