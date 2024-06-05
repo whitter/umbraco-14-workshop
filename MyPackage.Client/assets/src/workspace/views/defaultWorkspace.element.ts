@@ -8,9 +8,11 @@ import {
 export class TimeDefaultWorkspaceElement extends LitElement {
   render() {
     return html`
-      <uui-box headline="my workspace content">
-        <p>Some content goes here</p>
-      </uui-box>
+      <umb-body-layout header-transparent header-fit-height>
+        <uui-box headline="my workspace content">
+          <p>Some content goes here</p>
+        </uui-box>
+      </umb-body-layout>
     `;
   }
 }
