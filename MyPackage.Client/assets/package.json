@@ -8,15 +8,15 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "watch": "vite build --watch",
-    "generate": "openapi-ts --input http://localhost:17175/umbraco/swagger/time/swagger.json --output src/api --debug true --enums typescript --lint true --schemas false"
+    "generate": "openapi-ts --input http://localhost:38020/umbraco/swagger/time/swagger.json --output src/api --debug true --schemas false"
   },
   "dependencies": {
     "lit": "^3.1.0"
   },
   "devDependencies": {
-    "@hey-api/openapi-ts": "^0.39.0",
-    "@umbraco-cms/backoffice": "^14.0.0-beta002",
+    "@hey-api/openapi-ts": "^0.46.3",
+    "@umbraco-cms/backoffice": "^14.0.0",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.2.8"
   }
 }
