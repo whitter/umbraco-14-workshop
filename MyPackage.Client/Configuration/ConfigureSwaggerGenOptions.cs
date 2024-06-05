@@ -17,7 +17,5 @@ internal class ConfigureSwaggerGenOptions : IConfigureOptions<SwaggerGenOptions>
                 Version = "Latest",
                 Description = "Time from the server"
             });
-
-        options.CustomOperationIds(e => $"{e.ActionDescriptor.RouteValues["action"]}");
     }
 }
