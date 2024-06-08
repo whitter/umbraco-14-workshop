@@ -1,4 +1,4 @@
-import { UmbControllerHostElement } from "@umbraco-cms/backoffice/controller-api";
+import { UmbControllerHost } from "@umbraco-cms/backoffice/controller-api";
 import {
   UmbEntityActionArgs,
   UmbEntityActionBase,
@@ -12,7 +12,7 @@ export class TimeEntityAction extends UmbEntityActionBase<never> {
   #notificationContext?: UmbNotificationContext;
 
   constructor(
-    host: UmbControllerHostElement,
+    host: UmbControllerHost,
     args: UmbEntityActionArgs<never>
   ) {
     super(host, args);
@@ -32,4 +32,4 @@ export class TimeEntityAction extends UmbEntityActionBase<never> {
   }
 }
 
-export default TimeEntityAction;
+export { TimeEntityAction as api };

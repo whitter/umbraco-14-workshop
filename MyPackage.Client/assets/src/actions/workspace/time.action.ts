@@ -1,4 +1,5 @@
 import {
+  UmbWorkspaceAction,
   UmbWorkspaceActionArgs,
   UmbWorkspaceActionBase,
 } from "@umbraco-cms/backoffice/workspace";
@@ -8,7 +9,7 @@ import {
   UmbNotificationContext,
 } from "@umbraco-cms/backoffice/notification";
 
-export class TimeAction extends UmbWorkspaceActionBase<never> {
+export class TimeAction extends UmbWorkspaceActionBase implements UmbWorkspaceAction {
   #notificationContext?: UmbNotificationContext;
 
   constructor(
@@ -31,3 +32,5 @@ export class TimeAction extends UmbWorkspaceActionBase<never> {
     });
   }
 }
+
+export const api = TimeAction;

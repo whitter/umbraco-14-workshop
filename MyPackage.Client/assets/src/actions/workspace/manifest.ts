@@ -1,11 +1,11 @@
-import { ManifestWorkspaceAction } from "@umbraco-cms/backoffice/extension-registry";
-import { TimeAction } from "./time.action";
+import { ManifestWorkspaceActionDefaultKind } from "@umbraco-cms/backoffice/extension-registry";
 
-const action: ManifestWorkspaceAction = {
+const action: ManifestWorkspaceActionDefaultKind = {
   type: "workspaceAction",
+  kind: "default",
   alias: "time.workspace.action",
   name: "time workspace action",
-  api: TimeAction,
+  api: () => import('./time.action'),
   meta: {
     label: "Time Action",
     look: "primary",
