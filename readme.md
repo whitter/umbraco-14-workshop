@@ -26,6 +26,7 @@ Kevin Jump GitHub
 https://github.com/KevinJump/TimeDashboard
 
 First Blog Series
+
 https://dev.to/kevinjump/early-adopters-umbraco-package-template-fbh
 
 Second Blog Series
