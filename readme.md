@@ -1,32 +1,33 @@
-# Project templates
+To run this project and to work through the workshop on your own you will need the following dependencies.
 
-The project template will have installed everything you need 
-to start building a v14 package. there are just a couple of 
-things you need to know.
+- DotNet 8
+- Node 20
+- Visual Studio Code
+    - with extension C# Dev Kit
 
-## When need to build your assets.
+Also, here is a list of useful links we will use in the workshop.
 
-switching to the `MyPackage.Client/assets` folder, you 
-can run a command to compile your typescript files
-and put them in the wwwroot folder.
+# Umbraco Docs
 
-```
-npm run build
-```
+Initial Setup
 
-will build them once,
+https://docs.umbraco.com/umbraco-cms/fundamentals/setup/install
 
-# use 'watch' to get dynamic reloading on changes.
+First Extension
 
-```
-npm run watch
-```
+https://docs.umbraco.com/umbraco-cms/tutorials/creating-your-first-extension 
 
-will watch for changes, when you make a change to a .ts file
-it will recompile and place in the `wwwroot/app_plugins` folder.
+# Kevin Jump Blog Series
 
-the client package is a Razor Class Library (RCL) so the website
-will dynamically reload when it detects changes in the folder. 
+https://dev.to/kevinjump/series
 
-If you have your brower dev tools opem this will reload the site
-with the new javascript. and you will see your changes.
+Kevin Jump GitHub
+
+https://github.com/KevinJump/TimeDashboard
+
+First Blog Series
+https://dev.to/kevinjump/early-adopters-umbraco-package-template-fbh
+
+Second Blog Series
+
+https://dev.to/kevinjump/early-adopters-guide-to-umbraco-v14-packages-communicating-with-the-server-part-1-38lb
