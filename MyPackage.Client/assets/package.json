@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "watch": "vite build --watch",
-    "generate": "openapi-ts --input http://localhost:38020/umbraco/swagger/time/swagger.json --output src/api --debug true --schemas false"
+    "generate": "openapi-ts"
   },
   "dependencies": {
     "lit": "^3.1.0"
